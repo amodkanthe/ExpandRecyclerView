@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onExpandCollpase(int index, ParentItem parentItem) {
                 parentItem.isExpanded = !parentItem.isExpanded;
+                sampleAdapter.notifyItemChanged(index);
                 if (parentItem.isExpanded) {
                     objects.addAll(index + 1, parentItem.childItems);
                     sampleAdapter.notifyItemRangeInserted(index + 1, parentItem.childItems.size());
