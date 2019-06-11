@@ -57,7 +57,7 @@ public class SampleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if(getItemViewType(i) == TYPE_PARENT){
             ParentViewHolder parentViewHolder = (ParentViewHolder)viewHolder;
             ParentItem parentItem = (ParentItem)object;
-            parentViewHolder.tvTitle.setText("Parent:"+parentItem.getIndex());
+            parentViewHolder.tvTitle.setText("Parent (Click here to expand/Collapse):"+parentItem.getIndex());
         }else {
             ChildViewHolder childViewHolder = (ChildViewHolder) viewHolder;
             ChildItem childItem = (ChildItem) object;
